@@ -1,24 +1,32 @@
-# README
+# Blog app
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> This is a blog app made with rails. It allows users to make posts, comment under posts, like posts and saves their respectives actions.
 
-Things you may want to cover:
+## Languages and frameworks
+- Ruby
+- Rails
+- HTML
+- POSTGRESQL
 
-* Ruby version
+## To get this project running,
+### Installations
+Make sure you have installed the following
+- POSTGRESQL
+- Rails
+- Ruby
 
-* System dependencies
+### Cloning the project
+- Open your terminal in the directory you want to clone this project.
+- Run `git clone https://github.com/Elisha-Tetteyfio/blog-app.git`
+- Run `cd blog-app`
+- Run `rails s` to start up the app
 
-* Configuration
+## Author
+ ***Elisha Tetteyfio***
+ - GitHub [@elisha-tetteyfio](https://github.com/elisha-tetteyfio)
+- Twitter [Elisha](https://twitter.com/Nii_AlYasa)
+- LinkedIn [Elisha Tetteyfio](https://linkedin.com/in/elisha-tetteyfio)
 
-* Database creation
+## Show your support
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Give a ⭐️ if you like this project!
