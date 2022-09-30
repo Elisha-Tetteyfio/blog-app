@@ -2,10 +2,9 @@ require './spec/rails_helper'
 
 RSpec.describe Post, type: :model do
   #tests go here
-  first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
-  subject { Post.create(user: first_user, title: 'Hello', text: 'This is my first post')}
-  before {subject.save}
-
+  first_user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.', posts_counter: 0)
+  subject { Post.create(id: 2, user: first_user, title: 'Hello', text: 'This is my first post', comments_counter: 0, likes_counter: 0)}
+  
   it 'title must not be blank' do
     subject.title = nil
     expect(subject).to_not be_valid
