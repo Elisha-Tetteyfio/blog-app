@@ -12,7 +12,7 @@ describe PostsController, type: :request do
     end
 
     it 'Renders a correct template' do
-      expect(response).to render_template('posts/index')
+      expect(get('/users/:id/posts')).to render_template('posts/index')
     end
 
     it 'Has the correct placeholder text' do
