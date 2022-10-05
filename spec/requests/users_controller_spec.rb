@@ -15,6 +15,6 @@ describe UsersController, type: :request do
   end
 
   it 'Has the correct placeholder text' do
-    expect(response.body).to include("Blog App")
+    expect(response.body).to include('Blog App')
   end
 end
