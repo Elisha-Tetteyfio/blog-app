@@ -52,6 +52,7 @@ gem 'ffi'
 group :development, :test do
   gem 'capybara'
   gem 'rspec-rails', '~> 4.0.0.beta2'
+  gem 'rails-controller-testing'
 end
 
 group :development do
