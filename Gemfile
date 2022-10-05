@@ -50,6 +50,7 @@ gem 'ffi'
 # gem "image_processing", "~> 1.2"
 
 group :development, :test do
+  gem 'capybara'
   gem 'rspec-rails', '~> 4.0.0.beta2'
 end
 
