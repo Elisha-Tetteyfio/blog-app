@@ -1,34 +1,3 @@
-<style>
-  .all {
-    display: flex;
-    height: 100px;
-    justify-content: space-between;
-    margin: 10px 0;
-  }
-
-  .all > div {
-    border: 1px solid black;
-  }
-
-  .imgDiv {
-    width: 20%;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .userDiv {
-    width: 70%;
-    display: flex;
-    justify-content: space-around;
-  }
-
-  .comments {
-    align-self: flex-end;
-  }
-</style>
-
 <div class="all">
   <div class="imgDiv">
     <img src= <%=u.photo%> alt="alternatetext">
@@ -38,8 +7,3 @@
     <div class="comments">Number of posts: <%= u.posts_counter %></div>
   </div>
 </div>
-
-
-
-
-<%# User.create(name: 'Tom', photo: "https://media.istockphoto.com/photos/global-connection-picture-id1335295270?s=612x612", bio: 'Teacher from Mexico.') %>
