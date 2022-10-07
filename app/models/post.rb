@@ -12,7 +12,7 @@ class Post < ApplicationRecord
   end
 
   private
-  after_initialize :set_defaults, :update_post_count
+  before_validation :set_defaults, :update_post_count
 
   def set_defaults
     self.comments_counter ||= 0
