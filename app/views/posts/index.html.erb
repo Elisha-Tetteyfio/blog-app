@@ -2,10 +2,11 @@
 
 <% for i in @posts do %>
   <%= render partial: "post_card", locals: {post: i} %>
+  <div>
+    <% i.recent_comments.each do |comment| %>
+      <div> <%= render partial: "comments/comments_card", locals: {comment: comment} %></div>
+    <% end %>
+  </div>
 <% end %>
 
-
-<%# for i in @comments do %>
-  <%#= render partial: "comments/comment_card", locals: {comment: i} %>
-<%# end %>
 
