@@ -1,2 +1,6 @@
-<h1>Blog app</h1>
-<h2>User id</h2>
+<%= render partial: "user_card", locals: {u: @user} %>
+<div>
+  <div>Bio</div>
+  <%= @user.bio %>
+</div>
+
