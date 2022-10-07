@@ -1,2 +1,9 @@
-<h1>Blog App</h1>
-<h2>All posts</h2>
+<%= render partial: "users/user_card", locals: {u: @user} %>
+
+<% for i in @posts do %>
+  <%= render partial: "post_card", locals: {post: i} %>
+<% end %>
+
+<% for i in @comments do %>
+  <%= render partial: "comments/comment_card", locals: {comment: i} %>
+<% end %>
