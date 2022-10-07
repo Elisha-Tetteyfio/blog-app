@@ -1,12 +1,28 @@
-<%= render partial: "user_card", locals: {u: @user} %>
-<div>
-  <div>Bio</div>
-  <%= @user.bio %>
-</div>
-<div>
-  <% for i in @posts do %>
-    <%= render partial: "posts/post_card", locals: {post: i} %>
-  <% end %>
-</div>
-<button type='button'>See all posts</button>
+<style>
+  .showAll {
+    width: 90%;
+    margin: auto;
+  }
 
+  .bioDiv {
+    border: 1px solid black;
+  }
+
+  .bio {
+    margin: 0 0 20px;
+  }
+</style>
+
+<div class="showAll">
+  <%= render partial: "user_card", locals: {u: @user} %>
+  <div class="bioDiv">
+    <div class="bio">Bio</div>
+    <div> <%= @user.bio %> </div>
+  </div>
+  <div>
+    <% for i in @posts do %>
+      <%= render partial: "posts/post_card", locals: {post: i} %>
+    <% end %>
+  </div>
+  <button type='button'>See all posts</button>
+</div>

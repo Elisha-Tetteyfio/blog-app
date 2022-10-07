@@ -1,7 +1,26 @@
-<div>
-  <div><%= post.title %></div>
+<style>
+  .postCard {
+    border: 1px solid black;
+    margin: 10px 0;
+  }
+  .postTitle {
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+
+  .postComments {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .postComments > div {
+    align-self: flex-end;
+  }
+</style>
+
+<div class="postCard">
+  <div class="postTitle"><%= post.title %></div>
   <div><%= post.text %></div>
-  <div>
-    Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%>
+  <div class="postComments">
+    <div>Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%></div>
   </div>
 </div>
