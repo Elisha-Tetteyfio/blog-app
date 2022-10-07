@@ -1,2 +1,13 @@
-<h1>Blog app</h1>
-<h2>User id</h2>
+<div class="showAll">
+  <%= render partial: "user_card", locals: {u: @user} %>
+  <div class="bioDiv">
+    <div class="bio">Bio</div>
+    <div> <%= @user.bio %> </div>
+  </div>
+  <div>
+    <% for i in @recent_posts do %>
+      <%= render partial: "posts/post_card", locals: {post: i} %>
+    <% end %>
+  </div>
+  <button type='button'>See all posts</button>
+</div>

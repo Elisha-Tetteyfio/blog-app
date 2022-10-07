@@ -1,2 +1,15 @@
-<h1>Blog app</h1>
-<h2>Post id</h2>
+<div class="postAbout"> 
+  <div class="postTop">
+    <div><%= @post.title %> by <%= @user.name %> </div>
+    <div>
+      Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter%>
+    </div>
+  </div>
+
+  <div><%= @post.text %></div>
+</div>
+<div class="postComment">
+  <% for i in @comments do %>
+    <%= render partial: "comments/comments_card", locals: {comment: i} %>
+  <% end %>
+</div>
