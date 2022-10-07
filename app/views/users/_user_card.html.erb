@@ -1,12 +1,43 @@
-<table>
-  <td>
+<style>
+  .all {
+    display: flex;
+    height: 100px;
+    justify-content: space-around;
+    margin: 10px;
+  }
+
+  .all > div {
+    border: 1px solid black;
+  }
+
+  .imgDiv {
+    width: 20%;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .userDiv {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .comments {
+    align-self: flex-end;
+  }
+</style>
+
+<div class="all">
+  <div class="imgDiv">
     <img src= <%=u.photo%> alt="alternatetext">
-  </td>
-  <td>
+  </div>
+  <div class="userDiv">
     <h2><%= u.name %></h2>
-    <div>Number of posts: <%= u.posts_counter %></div>
-  </td>
-</table>
+    <div class="comments">Number of posts: <%= u.posts_counter %></div>
+  </div>
+</div>
 
 
 
