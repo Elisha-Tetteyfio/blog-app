@@ -3,6 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :post
 
   private
+
   before_validation :update_comment_count
 
   def update_comment_count

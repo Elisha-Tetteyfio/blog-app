@@ -12,6 +12,7 @@ class Post < ApplicationRecord
   end
 
   private
+
   before_validation :set_defaults, :update_post_count
 
   def set_defaults
