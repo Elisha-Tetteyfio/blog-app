@@ -1,5 +1,19 @@
-<div> 
-  <div>
+<style>
+  .postAbout {
+    border: 1px solid black;
+  }
+  .postTop {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+  }
+  .postComment {
+    border: 1px solid black;
+  }
+</style>
+
+<div class="postAbout"> 
+  <div class="postTop">
     <div><%= @post.title %> by <%= @user.name %> </div>
     <div>
       Comments: <%= @post.comments_counter%>, Likes: <%= @post.likes_counter%>
@@ -8,7 +22,8 @@
 
   <div><%= @post.text %></div>
 </div>
-
-<% for i in @comments do %>
-  <%= render partial: "comments/comments_card", locals: {comment: i} %>
-<% end %>
+<div class="postComment">
+  <% for i in @comments do %>
+    <%= render partial: "comments/comments_card", locals: {comment: i} %>
+  <% end %>
+</div>
