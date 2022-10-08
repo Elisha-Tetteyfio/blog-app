@@ -7,10 +7,12 @@ Rails.application.routes.draw do
   #get "/users", to: "users#update"
   root "users#index"
   resources :users, only: [:index, :show] do
-    resources :posts, only: [:index, :show]
+    resources :posts, only: [:index, :show, :new, :create]
   end
 
   get "/users/:id", to: "users#show"
+  get "/posts/new", to: "posts#new"
+  # get 'posts', to: "post#create"
   get "/posts/:id", to: "posts#show"
 
 end
