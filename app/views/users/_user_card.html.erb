@@ -1,9 +1,9 @@
-<div class="all">
+<div class="all" >
   <div class="imgDiv">
-    <img src= <%=u.photo%> alt="alternatetext">
+    <img src= <%=u.photo%> alt="user image">
   </div>
   <div class="userDiv">
-    <h2><%= u.name %></h2>
+    <h2><%=link_to u.name, user_path(u.id) %></h2>
     <div class="comments">Number of posts: <%= u.posts_counter %></div>
   </div>
 </div>

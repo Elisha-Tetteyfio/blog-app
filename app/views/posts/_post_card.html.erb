@@ -1,5 +1,5 @@
 <div class="postCard">
-  <div class="postTitle"><%= post.title %></div>
+  <div class="postTitle"><%= link_to post.title, user_post_path(post.user.id, post.id)  %></div>
   <div><%= post.text %></div>
   <div class="postComments">
     <div>Comments: <%= post.comments_counter%>, Likes: <%= post.likes_counter%></div>

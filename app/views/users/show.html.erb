@@ -9,5 +9,7 @@
       <%= render partial: "posts/post_card", locals: {post: i} %>
     <% end %>
   </div>
-  <button type='button'>See all posts</button>
+  <button type='button'>
+    <%= link_to "See all posts", user_posts_path(params[:id])%>
+  </button>
 </div>
