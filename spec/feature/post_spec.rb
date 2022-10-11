@@ -45,10 +45,10 @@ RSpec.describe Post, type: :feature do
 
   describe 'show page' do
     before :each do
-      first_user = User.create(name: 'Test user', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.',
-                           posts_counter: 0)
-      @p1 = Post.create(id: rand(1000), user: first_user, title: 'Testing', text: 'This is my first post', comments_counter: 0,
-                likes_counter: 0)
+      first_user = User.create(name: 'Test user', photo: 'https://unsplash.com/photos/F_-0BxGuVvo',
+                               bio: 'Teacher from Mexico.', posts_counter: 0)
+      @p1 = Post.create(id: rand(1000), user: first_user, title: 'Testing', text: 'This is my first post',
+                        comments_counter: 0, likes_counter: 0)
       Comment.create(user: first_user, post: @p1, text: 'First comment')
       @user = User.all[4]
       visit user_post_path(@user, @p1)
@@ -70,11 +70,11 @@ RSpec.describe Post, type: :feature do
     end
     it 'It shows the username of the commentators' do
       comments = @p1.comments
-      comments.each {|c| expect(page).to have_content(c.user.name)}
+      comments.each { |c| expect(page).to have_content(c.user.name) }
     end
     it 'It shows the text of the comments' do
       comments = @p1.comments
-      comments.each {|c| expect(page).to have_content(c.text)}
+      comments.each { |c| expect(page).to have_content(c.text) }
     end
   end
 end
